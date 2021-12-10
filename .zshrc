@@ -87,6 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -118,4 +119,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # If you come from bash you might have to change your $PATH.
-export PATH="$(yarn global bin):$HOME/bin:$HOME/.local/bin:$PATH"
+export PATH="$(brew --prefix bison)/bin:$(yarn global bin):$HOME/bin:$HOME/.local/bin:$PATH"
