@@ -88,6 +88,8 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export JAVA_HOME=$(/usr/libexec/java_home)
+export HADOOP_HOME="/opt/homebrew/Cellar/hadoop/3.3.2/libexec"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -110,6 +112,10 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="code ~/.zshrc"
+autoload -U zmv
+alias zcp="zmv -C"
+alias zln="zmv -L"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -118,5 +124,20 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
 # If you come from bash you might have to change your $PATH.
-export PATH="$(brew --prefix bison)/bin:$(yarn global bin):$HOME/bin:$HOME/.local/bin:$PATH"
+export PATH="$(yarn global bin):/opt/homebrew/anaconda3/bin:$(brew --prefix bison)/bin:$HOME/bin:$HOME/.local/bin:$PATH"
