@@ -62,4 +62,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # If you come from bash you might have to change your $PATH.
-export -U PATH="$(yarn global bin):$HOME/.local/bin:$PATH"
+export -U PATH="$HOME/.yarn/bin:$HOME/.local/bin:$PATH"
