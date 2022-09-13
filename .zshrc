@@ -35,8 +35,8 @@ autoload -U zmv
 
 alias zcp="zmv -C"
 alias zln="zmv -L"
-alias zshconfig="$EDITOR $HOME/.zshrc"
-alias zshreset="source $HOME/.zshrc"
+alias zshcfg="$EDITOR $HOME/.zshrc"
+alias zshrst="source $HOME/.zshrc"
 alias bi="brew install"
 alias bu="brew upgrade"
 
