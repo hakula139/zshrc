@@ -25,7 +25,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export EDITOR="code"
+export EDITOR="code --wait"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
 
 export JAVA_HOME=$(/usr/libexec/java_home)
