@@ -14,9 +14,15 @@ ENABLE_CORRECTION="true"
 HYPHEN_INSENSITIVE="true"
 
 plugins=(
-  git
-  extract
   autojump
+  brew
+  extract
+  fzf
+  git
+  gitignore
+  git-lfs
+  nvm
+  sudo
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -31,20 +37,17 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottle
 export JAVA_HOME=$(/usr/libexec/java_home)
 export HADOOP_HOME="$(readlink -f $(brew --prefix hadoop))/libexec"
 
+export NVM_LAZY=1
+export NVM_AUTOLOAD=1
+
 autoload -U zmv
 
 alias zcp="zmv -C"
 alias zln="zmv -L"
 alias zshcfg="$EDITOR $HOME/.zshrc"
 alias zshrst="source $HOME/.zshrc"
-alias bi="brew install"
-alias bu="brew upgrade"
 
-[[ ! -f "$HOME/.p10k.zsh" ]] || source "$HOME/.p10k.zsh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -f "$HOME/.p10k.zsh" ] && source "$HOME/.p10k.zsh"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
