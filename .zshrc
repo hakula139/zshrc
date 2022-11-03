@@ -66,3 +66,6 @@ unset __conda_setup
 
 # If you come from bash you might have to change your $PATH.
 export -U PATH="$HOME/.yarn/bin:$HOME/go/bin:$HOME/.local/bin:$PATH"
+
+PYTHONPATH=$(python3 -c "import sys; print(':'.join(sys.path)[1:])")
+alias pytrace="python3 -m trace --ignore-dir=$PYTHONPATH -t"
