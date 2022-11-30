@@ -36,6 +36,7 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottle
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 export HADOOP_HOME="$(readlink -f $(brew --prefix hadoop))/libexec"
+export PNPM_HOME="$HOME/Library/pnpm"
 
 export NVM_LAZY=1
 export NVM_AUTOLOAD=1
@@ -65,7 +66,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # If you come from bash you might have to change your $PATH.
-export -U PATH="$HOME/.yarn/bin:$HOME/go/bin:$HOME/.local/bin:$PATH"
+export -U PATH="$PNPM_HOME:$HOME/.yarn/bin:$HOME/go/bin:$HOME/.local/bin:$PATH"
 
 PYTHONPATH=$(python3 -c "import sys; print(':'.join(sys.path)[1:])")
 alias pytrace="python3 -m trace --ignore-dir=$PYTHONPATH -t"
