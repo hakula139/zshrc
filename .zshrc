@@ -27,6 +27,8 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+zstyle ':omz:plugins:nvm' silent-autoload yes
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -37,9 +39,6 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottle
 export JAVA_HOME=$(/usr/libexec/java_home)
 export HADOOP_HOME="$(readlink -f $(brew --prefix hadoop))/libexec"
 export PNPM_HOME="$HOME/Library/pnpm"
-
-export NVM_LAZY=1
-export NVM_AUTOLOAD=1
 
 autoload -U zmv
 
