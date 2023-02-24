@@ -48,6 +48,8 @@ alias zln="zmv -L"
 alias zshcfg="$EDITOR $HOME/.zshrc"
 alias zshrst="source $HOME/.zshrc"
 
+alias gls="git pull --recurse-submodules && git submodule foreach git lfs pull"
+
 [ -f "$HOME/.p10k.zsh" ] && source "$HOME/.p10k.zsh"
 
 # >>> conda initialize >>>
