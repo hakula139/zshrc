@@ -8,13 +8,14 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=5"
-export UPDATE_ZSH_DAYS=14
+export UPDATE_ZSH_DAYS=3
 
 ENABLE_CORRECTION="true"
 HYPHEN_INSENSITIVE="true"
 
 plugins=(
   autojump
+  autoupdate
   brew
   extract
   fzf
