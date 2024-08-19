@@ -22,6 +22,7 @@ plugins=(
   git
   gitignore
   git-lfs
+  kubectl
   nvm
   sudo
   zsh-autosuggestions
