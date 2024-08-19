@@ -22,6 +22,7 @@ plugins=(
   git
   gitignore
   git-lfs
+  helm
   kubectl
   nvm
   sudo
