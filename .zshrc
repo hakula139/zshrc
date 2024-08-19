@@ -17,6 +17,7 @@ plugins=(
   autojump
   autoupdate
   brew
+  docker
   extract
   fzf
   git
@@ -25,6 +26,8 @@ plugins=(
   helm
   kubectl
   nvm
+  podman
+  poetry
   sudo
   zsh-autosuggestions
   zsh-syntax-highlighting
