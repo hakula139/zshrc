@@ -18,6 +18,7 @@ plugins=(
   autoupdate
   brew
   docker
+  docker-compose
   extract
   fzf
   git
@@ -26,6 +27,7 @@ plugins=(
   helm
   kubectl
   nvm
+  pip
   podman
   poetry
   sudo
@@ -50,8 +52,8 @@ autoload -U zmv
 
 alias zcp="zmv -C"
 alias zln="zmv -L"
-alias zshcfg="$EDITOR $HOME/.zshrc"
-alias zshrst="source $HOME/.zshrc"
+alias zcfg="$EDITOR $HOME/.zshrc"
+alias zrst="source $HOME/.zshrc"
 
 alias gls="git pull --recurse-submodules && git submodule foreach git lfs pull"
 
