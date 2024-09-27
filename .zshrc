@@ -28,8 +28,8 @@ plugins=(
   kubectl
   nvm
   pip
-  podman
   poetry
+  podman
   sudo
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -56,8 +56,11 @@ alias zcfg="$EDITOR $HOME/.zshrc"
 alias zrst="source $HOME/.zshrc"
 
 alias gls="git pull --recurse-submodules && git submodule foreach git lfs pull"
+alias pipru="podman image prune -a"
+alias kdelrs0="kubectl delete replicaset \$(kubectl get replicaset -o jsonpath='{ .items[?(@.spec.replicas==0)].metadata.name }')"
 
 [ -f "$HOME/.p10k.zsh" ] && source "$HOME/.p10k.zsh"
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
