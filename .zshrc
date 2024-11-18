@@ -57,7 +57,9 @@ alias zrst="source $HOME/.zshrc"
 
 alias gls="git pull --recurse-submodules && git submodule foreach git lfs pull"
 alias pipru="podman image prune -a"
-alias kdelrs0="kubectl delete replicaset \$(kubectl get replicaset -o jsonpath='{ .items[?(@.spec.replicas==0)].metadata.name }')"
+alias kdelpf="kdelp --field-selector=status.phase=Failed"
+alias kdelrs="kubectl delete replicaset"
+alias kdelrs0="kdelrs \$(kgrs -o jsonpath='{ .items[?(@.spec.replicas==0)].metadata.name }')"
 
 [ -f "$HOME/.p10k.zsh" ] && source "$HOME/.p10k.zsh"
 [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
