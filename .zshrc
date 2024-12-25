@@ -22,14 +22,14 @@ plugins=(
   extract
   fzf
   git
-  gitignore
   git-lfs
+  gitignore
   helm
   kubectl
   nvm
   pip
-  poetry
   podman
+  poetry
   sudo
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -45,7 +45,6 @@ export EDITOR="code --wait"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
 
 export JAVA_HOME=$(/usr/libexec/java_home)
-export HADOOP_HOME="$(readlink -f $(brew --prefix hadoop))/libexec"
 export PNPM_HOME="$HOME/Library/pnpm"
 
 autoload -U zmv
