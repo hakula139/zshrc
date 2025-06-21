@@ -8,9 +8,9 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=5"
-export UPDATE_ZSH_DAYS=3
+export UPDATE_ZSH_DAYS=14
 
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 HYPHEN_INSENSITIVE="true"
 
 plugins=(
@@ -42,7 +42,8 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export EDITOR="code --wait"
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.cloud.tencent.com/homebrew-bottles"
+export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 export PNPM_HOME="$HOME/Library/pnpm"
