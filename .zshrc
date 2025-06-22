@@ -41,7 +41,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export EDITOR="code --wait"
 export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 
@@ -50,9 +49,19 @@ export PNPM_HOME="$HOME/Library/pnpm"
 
 autoload -U zmv
 
+if which cursor >/dev/null; then
+  export EDITOR="cursor"
+elif which code >/dev/null; then
+  export EDITOR="code"
+else
+  export EDITOR="vim"
+fi
+
+alias e="$EDITOR"
+
 alias zcp="zmv -C"
 alias zln="zmv -L"
-alias zcfg="$EDITOR $HOME/.zshrc"
+alias zcfg="e $HOME/.zshrc"
 alias zrst="source $HOME/.zshrc"
 
 function git-retag() {
