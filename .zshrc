@@ -58,6 +58,7 @@ else
 fi
 
 alias e="$EDITOR"
+alias sudo="sudo "
 
 alias zcp="zmv -C"
 alias zln="zmv -L"
